@@ -4,7 +4,7 @@ set -e
 
 cd "$(dirname "$0")"
 
-APPLICATION_NAME=ytsclient
+APPLICATION_NAME=Runner
 
 echo "[*] $APPLICATION_NAME Build Script"
 
