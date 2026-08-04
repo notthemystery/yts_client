@@ -32,11 +32,11 @@ jobs:
 
       # Step 4: Install Flutter Dart package dependencies
       - name: Install Dependencies
-        run: flutter pub get
+        run: flutter pub get && cd ios && pod install
 
       # Step 6: Compile the iOS App without code signing
       - name: Build iOS Application
-        run: flutter build ios --no-codesign
+        run: chmod +x Build.sh && ./Build.sh
 
       # Step 7: (Optional) Compress the app bundle into an unsigned .zip artifact
       - name: Compress Build Artifact
