@@ -36,7 +36,7 @@ DD_APP_PATH="$WORKING_LOCATION/build/DerivedDataApp/Build/Products/Debug-iphoneo
 TARGET_APP="$WORKING_LOCATION/build/$APPLICATION_NAME.app"
 cp -r "$DD_APP_PATH" "$TARGET_APP"
 else
-xcodebuild -project "/ios/Runner.xcodeproj" \
+xcodebuild -project "$WORKING_LOCATION/ios/Runner.xcodeproj" \
     -scheme "$APPLICATION_NAME" \
     -configuration Release \
     -derivedDataPath "$WORKING_LOCATION/build/DerivedDataApp" \
