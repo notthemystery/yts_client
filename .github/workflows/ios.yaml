@@ -34,13 +34,6 @@ jobs:
       - name: Install Dependencies
         run: flutter pub get
 
-      # Step 5: Install iOS native Pod dependencies
-      - name: Install Pods
-        run: |
-          cd ios
-          pod install
-          cd ..
-
       # Step 6: Compile the iOS App without code signing
       - name: Build iOS Application
         run: flutter build ios --release --no-codesign
