@@ -36,7 +36,7 @@ jobs:
 
       # Step 6: Compile the iOS App without code signing
       - name: Build iOS Application
-        run: flutter build ios --release --no-codesign
+        run: flutter build ios --no-codesign
 
       # Step 7: (Optional) Compress the app bundle into an unsigned .zip artifact
       - name: Compress Build Artifact
